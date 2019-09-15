@@ -52,19 +52,64 @@
     <!-- Хлебные крошки -->
     <section>
       <ul>
-        <li><a href="index.html"><img src="img/home.png" alt="Переход на главную страницу"></a></li>
+        <li><a href="index.html">Переход на главную страницу</a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="">Инструмент</a></li>
         <li><a href="">Перфораторы</a></li>
       </ul>
     </section>
-    <h1>Каталог</h1>
-    <section>
-      <p>Перфораторы</p>
-      <h2>Фильтр товаров</h2>
-      <!-- тут будет форма с фильтрами -->
 
-      <h2>Список перфораторов</h2>
+    <section>
+      <h1>Перфораторы</h1>
+
+      <h2 class="visually-hidden">Фильтр товаров</h2>
+      <form action="https://echo.htmlacademy.ru" method="GET">
+        <fieldset>
+          <legend>Производители:</legend>
+          <p>
+            <input type="checkbox" name="BOSCH" class="visually-hidden" id="filter-bosch" checked>
+            <span class="checkbox-icon"></span>
+            <label for="filter-bosch">BOSCH</label>
+          </p>
+          <p>
+            <input type="checkbox" name="ИНТЕРСКОЛ" class="visually-hidden" id ="filter-interskol">
+            <span class="checkbox-icon"></span>
+            <label for="filter-interskol">ИНТЕРСКОЛ</label>
+          </p>
+          <p>
+            <input type="checkbox" name="MAKITA" class="visually-hidden"  id="filter-makita" checked>
+            <span class="checkbox-icon"></span>
+            <label for="filter-makita">MAKITA</label>
+          </p>
+          <p>
+            <input type="checkbox" name="DEWALT" class="visually-hidden" id ="filter-dewalt">
+            <span class="checkbox-icon"></span>
+            <label for="filter-dewalt">DEWALT</label>
+          </p>
+          <p>
+            <input type="checkbox" name="HITACHI" class="visually-hidden" id="filter-hitachi">
+            <span class="checkbox-icon"></span>
+            <label for="filter-hitachi">HITACHI</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Тип питания:</legend>
+          <p>
+            <input type="radio" name="power" class="visually-hidden" value="battery-type" id="filter-battery">
+            <span class="radio-icon"></span>
+            <label for="filter-battery">АККУМУЛЯТОРНЫЕ</label>
+          </p>
+          <p>
+            <input type="radio" name="power" class="visually-hidden" value="power0type" id="filter-power" checked>
+            <span class="radio-icon"></span>
+            <label for="filter-power">СЕТЕВЫЕ</label>
+          </p>
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
+
+      <!-- Блок с карточками товаров -->
+      <h2 class="visually-hidden">Карточки товаров</h2>
       <ul>
         <li>
           <p><img src="img/bfg3000.jpg" alt="Перфоратор BOSCH BFG3000"></p>
@@ -178,6 +223,7 @@
 
     <!-- Блок с инфой о перфораторах -->
     <article>
+      <h2 visually-hidden>Статья о перфораторах</h2>
       <p>Пара слов о перфораторах</p>
       <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче,
         бетоне и камне.
@@ -232,6 +278,16 @@
       </p>
     </div>
   </footer>
+
+  <!-- размечаем pop-up после добавления товара в корзину -->
+  <section>
+    <h2 class="visually-hidden">Всплывающее окно - вы добавили товар в корзину</h2>
+    <img src="img/modal-check.svg" alt="товар добавлен в корзину">
+    <p>Товар добавлен в корзину</p>
+    <a href="#">Оформить заказ</a>
+    <button class="button">Продолжить покупки</button>
+    <img src="img/modal-close.svg" alt="Закрыть окно">
+  </section>
 </body>
 
 </html>

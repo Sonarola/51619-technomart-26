@@ -50,10 +50,10 @@
 
     <!-- Основное содержимое -->
     <main>
-      <h1>Интренет-магазин "Техномаркт"</h1>
+      <h1 class="visually-hidden">Интренет-магазин "Техномаркт"</h1>
       <!-- Блок с разделами -->
       <section>
-        <h2>Разделы интернет-магазина</h2>
+        <h2 class="visually-hidden">Разделы интернет-магазина</h2>
         <div>
           <p>Материалы</p>
           <a href="">На любой вкус</a>
@@ -148,20 +148,49 @@
           <a href="">Все производители</a>
         </div>
         <ul>
-          <li><a href=""><img src="img/bosch.png" alt="Bosch"></a></li>
-          <li><a href=""><img src="img/makita.png" alt="Makita"></a></li>
-          <li><a href=""><img src="img/de-walt.png" alt="Dewalt"></a></li>
-          <li><a href=""><img src="img/interskol.png" alt="Интерскол"></a></li>
-          <li><a href=""><img src="img/hitachi.png" alt="Hitachi"></a></li>
-          <li><a href=""><img src="img/lg.png" alt="LG"></a></li>
-          <li><a href=""><img src="img/aeg.png" alt="AEG Power Solution"></a></li>
-          <li><a href=""><img src="img/metabo.png" alt="Metabo"></a></li>
+          <li>
+            <a href="">
+              <img src="img/bosch.png" alt="Компания Bosch">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/makita.png" alt="Компания Makita">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/de-walt.png" alt="Компания Dewalt">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/interskol.png" alt="Компания Интерскол">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/hitachi.png" alt="Компания Hitachi">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/lg.png" alt="LG">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/aeg.png" alt="AEG Power Solution">
+            </a></li>
+          <li>
+            <a href="">
+              <img src="img/metabo.png" alt="Metabo"></a></li>
         </ul>
       </section>
 
       <!-- Блок с описнием сервисов и доставки -->
       <section>
-        <h2>Доставка, гарантия, кредитование</h2>
+        <h2 class="visually-hidden">Доставка, гарантия, кредитование</h2>
         <div>
           <p>Сервисы</p>
           <p>Хороший интернет-магазин отличается от плохого не только ценами!
@@ -210,7 +239,7 @@
     <!-- Футер -->
     <footer>
       <div>
-        <a href="index.html">Техномаркт</a>
+        <a href="index.html"><img src="/img/logo-name.svg" alt="Логотип интернет-магазина Техномаркт"></a>
         <ul>
           <li><a href="">Компания</a></li>
           <li><a href="">Новости</a></li>
@@ -252,5 +281,34 @@
         </p>
       </div>
     </footer>
+
+    <!-- размечаем pop-up c картой -->
+    <section>
+      <h2 class="visually-hidden">Как добраться</h2>
+      <p>
+        <img src="img/map-modal.png" alt="Офис компании находится по адресу Большая Конюшенная  ул., 19">
+      </p>
+      <button type="button">Закрыть</button>
+    </section>
+    <!-- размечаем pop-up с формой обратной связи-->
+    <section>
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form action="post">
+        <p>
+          <label for="field-name">Ваше имя:</label>
+          <input type="text" name="yourname"  placeholder="Имя Фамилия" id="field-name">
+        </p>
+        <p>
+          <label for="field-email">Ваш e-mail:</label>
+          <input type="text" name="email"   placeholder="email@example.com" id="field-email">
+        </p>
+        <p>
+          <label for="field-letter">Текст письма</label>
+          <textarea name="letter" id="" cols="30" rows="5" placeholder="В свободной форме" id="field-letter"></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
   </body>
 </html>
