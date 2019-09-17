@@ -64,6 +64,23 @@
 
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form action="https://echo.htmlacademy.ru" method="GET">
+        <p>Фильтр</p>
+        <!-- делаем слайдер диапазона пока только визуально -->
+        <div>
+          <p>Цена:</p>
+          <div>
+            <div></div>
+            <span><img src="img/filter-button.svg" alt="Левая кнопка фильтра"></span>
+            <span><img src="img/filter-button.svg" alt="Правая кнопка фильтра"></span>
+          </div>
+          <div>
+            <span>0</span>
+          </div>
+          <span>-</span>
+          <div>
+            30000
+          </div>
+        </div>
         <fieldset>
           <legend>Производители:</legend>
           <p>
@@ -108,6 +125,16 @@
         <button type="submit">Показать</button>
       </form>
 
+
+      <!-- Блок с сортировкой -->
+      <section>
+        <p>Сортировка:</p>
+        <a href="">По цене</a>
+        <a href="">По типу</a>
+        <a href="">По функционалу</a>
+        <button type="button"></button>
+        <button type="button"></button>
+      </section>
       <!-- Блок с карточками товаров -->
       <h2 class="visually-hidden">Карточки товаров</h2>
       <ul>
@@ -214,7 +241,7 @@
 
       <!-- Пагинация -->
       <ul>
-        <li><a>1</a></li>
+        <li><a href="">1</a></li>
         <li><a href="">2</a></li>
         <li><a href="">3</a></li>
         <li><a href="">Следующая</a></li>
