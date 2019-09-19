@@ -21,15 +21,16 @@ a {
 }
 
 
-/* header */
+/* стилизуем header */
 .main-header {
   font-family: "Cuprum", sans-serif;
   font-size: 17px;
+  color: #ffffff;
   background-color: #f4f7f9;
 }
 
 .header-top {
-  display: flex;
+  height: 42px;
   background-color: #293449;
 }
 
@@ -37,23 +38,129 @@ a {
   color: #ffffff;
 }
 
+
+/* стилизуем логотип */
 .logo {
-  width: 220px;
-  height: 47px;
+  float: left;
+  padding-top: 12px;
+  padding-right: 56px;
+  padding-bottom: 9px;
+  padding-left: 55px;
   background-color: #ee3643;
   box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
+.logo:hover {
+  background-color: #ca2c37;
+}
+
+.logo:active {
+  background-color: #ba2732;
+}
+
+
+/* стилизуем поле поиска */
+.search {
+  float: left;
+  width: 270px;
+}
+
+.search input {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 49px;
+  font-family: "Cuprum","Arial",sans-serif;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 18px;
+  background-color: #293449;
+  border: none;
+}
+
+.search input:hover {
+  background-color: #212a3a;
+}
+
+.search input::placeholder {
+  color: #ffffff;
+}
+
+.search input:focus {
+  color: #000000;
+  background-color: #ffffff;
+  outline: none;
+}
+
+
+/* Стилизуем кнопку закладок */
+.bookmark {
+  float: left;
+  padding-top: 12px;
+  padding-right: 28px;
+  padding-bottom: 12px;
+  padding-left: 44px;
+  font-family: "Cuprum","Arial",sans-serif;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.bookmark:hover {
+  background-color: #212a3a;
+}
+
+.bookmark:active {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #161d29;
+}
+
+
+/* стилизуем кнопку корзины */
+.cart {
+  float: left;
+  padding-top: 12px;
+  padding-right: 28px;
+  padding-bottom: 12px;
+  padding-left: 44px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.cart:hover {
+  background-color: #212a3a;
+}
+
+.cart:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #161d29;
+}
+
+
+/* стилизуем кнопку оформления заказа */
 .order {
-  padding: 14px 22px 13px 20px;
+  float: left;
+  padding: 12px 22px 12px 20px;
+  line-height: 18px;
   background-color: #63a63e;
+}
+
+.order:hover {
+  background-color: #5fbb2d;
+}
+
+.order:active {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #518534;
 }
 
 .about p {
   font-style: italic;
   font-size: 16px;
   line-height: 27px;
-  color: #ee3643
+  color: #ee3643;
 }
 
 .phone {
@@ -63,6 +170,9 @@ a {
 }
 
 .phone p {
+  display: block;
+  padding: 13px 52px 11px 74px;
+  margin: 0;
   font-size: 21px;
   color: #ee3643;
 }
