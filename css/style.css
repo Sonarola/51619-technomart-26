@@ -50,7 +50,8 @@ a {
   box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
-.logo:hover {
+.logo:hover,
+.logo:focus {
   background-color: #ca2c37;
 }
 
@@ -106,7 +107,8 @@ a {
   line-height: 18px;
 }
 
-.bookmark:hover {
+.bookmark:hover,
+.bookmark:focus {
   background-color: #212a3a;
 }
 
@@ -129,7 +131,8 @@ a {
   line-height: 18px;
 }
 
-.cart:hover {
+.cart:hover,
+.cart:focus {
   background-color: #212a3a;
 }
 
@@ -147,7 +150,8 @@ a {
   background-color: #63a63e;
 }
 
-.order:hover {
+.order:hover,
+.order:focus {
   background-color: #5fbb2d;
 }
 
@@ -156,11 +160,17 @@ a {
   background-color: #518534;
 }
 
+/* стилизуем среднюю часть шапки */
 .about p {
   font-style: italic;
   font-size: 16px;
-  line-height: 27px;
+  line-height: 23px;
   color: #ee3643;
+}
+
+/* блок с телефоном и адресом */
+.info {
+  width: 270px;
 }
 
 .phone {
@@ -171,8 +181,18 @@ a {
 
 .phone p {
   display: block;
-  padding: 13px 52px 11px 74px;
   margin: 0;
+  padding: 11px 45px 13px 70px;
   font-size: 21px;
+  letter-spacing: 0.42px;
   color: #ee3643;
 }
+
+.address p {
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: center;
+  color: #32425c;
+}
+
+/* блок с кнопками войти/регистрация */
