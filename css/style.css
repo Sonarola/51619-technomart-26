@@ -20,6 +20,16 @@ a {
   margin: 0 auto;
 }
 
+.btn {
+  font-family: "Cuprum", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  border: none;
+}
+
 
 /* стилизуем header */
 .main-header {
@@ -32,10 +42,6 @@ a {
 .header-top {
   height: 42px;
   background-color: #293449;
-}
-
-.main-header a {
-  color: #ffffff;
 }
 
 
@@ -196,3 +202,47 @@ a {
 }
 
 /* блок с кнопками войти/регистрация */
+.enter {
+  padding-top: 12px;
+  padding-right: 27px;
+  padding-bottom: 12px;
+  padding-left: 48px;
+  font-size: 21px;
+  text-transform: none;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.registration {
+  padding-top: 12px;
+  padding-right: 25px;
+  padding-bottom: 12px;
+  padding-left: 25px;
+  font-size: 21px;
+  text-transform: none;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.user a:hover,
+.user a:focus {
+  color: #ee3643;
+}
+
+.user a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* блок с основной навигацией */
+.main-nav ul {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  background-color: #293449;
+  list-style: none;
+}
+
+.main-nav a {
+  color: #ffffff;
+}
