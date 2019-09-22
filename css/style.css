@@ -5,7 +5,7 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: normal;
   color: #000000;
 
   background-color: #ffffff;
@@ -21,8 +21,9 @@ a {
 }
 
 .btn {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum","Arial",sans-serif;
   font-size: 14px;
+  color: #ffffff;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
@@ -30,30 +31,44 @@ a {
   border: none;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
 
 /* стилизуем header */
 .main-header {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum","Arial",sans-serif;
   font-size: 17px;
   color: #ffffff;
   background-color: #f4f7f9;
 }
 
-.header-top {
-  height: 42px;
+.main-nav-wrapper {
+  width: 100%;
   background-color: #293449;
 }
 
 
 /* стилизуем логотип */
 .logo {
-  float: left;
-  padding-top: 12px;
-  padding-right: 56px;
-  padding-bottom: 9px;
-  padding-left: 55px;
   background-color: #ee3643;
-  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  border-bottom: 5px solid #b52933;
 }
 
 .logo:hover,
@@ -68,15 +83,11 @@ a {
 
 /* стилизуем поле поиска */
 .search {
-  float: left;
   width: 270px;
 }
 
 .search input {
   width: 100%;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 49px;
   font-family: "Cuprum","Arial",sans-serif;
   color: #ffffff;
   font-size: 17px;
@@ -102,11 +113,6 @@ a {
 
 /* Стилизуем кнопку закладок */
 .bookmark {
-  float: left;
-  padding-top: 12px;
-  padding-right: 28px;
-  padding-bottom: 12px;
-  padding-left: 44px;
   font-family: "Cuprum","Arial",sans-serif;
   color: #ffffff;
   font-size: 17px;
@@ -126,11 +132,6 @@ a {
 
 /* стилизуем кнопку корзины */
 .cart {
-  float: left;
-  padding-top: 12px;
-  padding-right: 28px;
-  padding-bottom: 12px;
-  padding-left: 44px;
   font-family: "Cuprum", "Arial", sans-serif;
   color: #ffffff;
   font-size: 17px;
@@ -150,9 +151,8 @@ a {
 
 /* стилизуем кнопку оформления заказа */
 .order {
-  float: left;
-  padding: 12px 22px 12px 20px;
   line-height: 18px;
+  color: #ffffff;
   background-color: #63a63e;
 }
 
@@ -235,14 +235,505 @@ a {
 
 
 /* блок с основной навигацией */
+.main-nav {
+  margin: 0;
+  padding: 0;
+}
+
 .main-nav ul {
-  display: flex;
-  justify-content: space-between;
-  height: 60px;
   background-color: #293449;
   list-style: none;
 }
 
 .main-nav a {
+  height: 60px;
   color: #ffffff;
+}
+
+
+
+/* блок с описанием компании и контактами */
+.delivery h2,
+.contacts h2 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.delivery ul {
+  font-family: "Cuprum", "Arial", sans-serif;
+  line-height: 36px;
+  font-size: 18px;
+  list-style: none;
+}
+
+
+/* футер */
+.main-footer {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+}
+
+.footer-light-wrapper {
+  background-color: #32425c;
+}
+
+.footer-nav-list {
+  list-style: none;
+}
+
+.footer-nav-list a {
+  color: #f1f5f7;
+}
+
+.middle-footer p {
+  font-size: 18px;
+  color: #f3f7f9;
+}
+
+.middle-footer .footer-nav-list a {
+  color: #ffd180;
+}
+
+.footer-dark-wrapper {
+  background-color: #293449;
+}
+
+.bottom-footer {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.bottom-footer ul {
+  list-style: none;
+}
+
+.bottom-footer p a {
+  color: #ffd180;
+}
+
+
+/* modals */
+.map-modal,
+.feedback-modal,
+.modal-check {
+  display: none;
+}
+
+
+
+
+/* стили каталога */
+
+/* блок с логином */
+.name {
+  padding-top: 12px;
+  padding-right: 69px;
+  padding-bottom: 12px;
+  padding-left: 47px;
+  font-size: 21px;
+  text-transform: none;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.login a {
+  font-size: 16px;
+  color: #32425c;
+}
+
+.name-options {
+  text-decoration: underline;
+}
+
+.name-options:hover,
+.name-options:focus {
+  color: #ee3643;
+}
+
+.login a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* блок с хлбными крошками */
+.breadcrumbs ul {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+
+/* основной блок каталога */
+/* основной блок каталога */
+/* основной блок каталога */
+.catalog h1 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 30px;
+  color: #32425c;
+  text-transform: uppercase;
+}
+
+/* фильтры */
+.catalog form {
+  width: 220px;
+  text-transform: uppercase;
+
+}
+
+form p:nth-child(1) {
+  font-size: 13px;
+  background-color: #f7f3ec;
+}
+
+.form-headline {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+/* фильтр-ползунок */
+.range-filter {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.range-control {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 9px;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 80px;
+  background-color: #f7f3ec;
+  border-right: 2px;
+}
+
+.bar-background {
+  height: 2px;
+  margin-top: 39px;
+  background: #d7dcde;
+}
+
+.bar {
+  width: 152px;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.toggle {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.toggle-end {
+  left: 160px;
+}
+
+.price-range {
+  display: flex;
+}
+
+.price-start,
+.price-end {
+  width: 95px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  background-color: #f7f3ec;
+  border-radius: 3px;
+}
+
+.price-start+span {
+  margin-left: 10px;
+  padding-top: 12px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.price-end {
+  margin-left: 10px;
+}
+
+/* фильтр по производителям */
+.manufacturers,
+.power {
+  margin-top: 15px;
+}
+
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+fieldset p{
+  font-size: 15px;
+}
+
+legend+p {
+  margin-top: 10px;
+}
+
+.manufacturers {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* кнопка "показать" */
+.show {
+  margin-top: 60px;
+  padding-top: 15px;
+  padding-right: 39px;
+  padding-bottom: 15px;
+  padding-left: 39px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+/* блок сортровки */
+.catalog-items {
+  width: 700px;
+}
+
+.sorting-wrap {
+  display: flex;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #f7f3ec;
+}
+
+.sorting {
+  margin-left: 19px;
+}
+
+.sorting p {
+  margin: 0;
+}
+
+.sorting-type a {
+  color: rgba(0, 0, 0, 0.18);
+  border-bottom: 1px dotted #ee3643;
+}
+
+.sorting-type a:hover,
+.sorting-type a:focus {
+  color: #000000;
+  border-bottom: 1px solid #ee3643;
+}
+
+.sorting-type a:active {
+  color: #ee3643;
+  border-bottom: none;
+}
+
+.sorting-type {
+  margin-left: 139px;
+}
+
+.by-type{
+  margin-left: 71px;
+}
+
+.by-functional {
+  margin-left: 65px;
+}
+
+/* карточки товаров */
+.grid-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  list-style: none;
+}
+
+.catalog-item {
+  position: relative;
+  width: 218px;
+  margin-top: 21px;
+  text-align: center;
+  border: solid 1px #e5e5e5;
+}
+
+.catalog-item:nth-child(3n+2) {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.catalog-item:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.catalog-item img {
+  margin-bottom: 12px;
+}
+
+.catalog-item p,
+.catalog-item h3 {
+  margin: 0;
+}
+
+.item-name {
+  color: #000000;
+}
+
+.only-red .red-price {
+  margin-top: 50px;
+}
+
+.red-price {
+  margin: 13px auto 12px;
+  /* margin-top: 13px; */
+  padding-top: 9px;
+  width: 141px;
+  height: 38px;
+  color: #ffffff;
+  background-image: url(../img/red-button.svg);
+  background-repeat: no-repeat;
+}
+
+.pay-buttons {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  padding-top: 44px;
+  width: 218px;
+  height: 100px;
+  background-color: #ffffff;
+}
+
+.catalog-item:hover .pay-buttons {
+  display: block;
+}
+
+.buy-btn,
+.bookmark-btn {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding-top: 12px;
+  padding-right: 45px;
+  padding-bottom: 9px;
+  padding-left: 49px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #63a63e;
+  border-bottom: 3px solid #367315;
+  border-radius: 3px;
+}
+
+.buy-btn:hover,
+.buy-btn:focus {
+  background-color: #5fbb2d;
+}
+
+.buy-btn:active {
+  background-color: #518534;
+  border-bottom: 3px solid #518534;
+}
+
+.bookmark-btn {
+  padding-top: 12px;
+  padding-right: 29px;
+  padding-bottom: 9px;
+  padding-left: 33px;
+  color: #32425c;
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+
+.bookmark-btn:hover,
+.bookmark-btn:focus {
+  border: 3px solid #32425c;
+}
+
+.bookmark-btn:active {
+  color: rgba(50, 66, 92, 0.3);
+  border: 3px solid rgba(50, 66, 92, 0.3);
+}
+
+.old-price {
+  display: block;
+  margin-top: 18px;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+/* пагинация */
+.pagination {
+  margin-top: 52px;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.pagination li {
+  display: inline-block;
+}
+
+.pagination a {
+  margin-right: 10px;
+  padding: 10px 16px 12px 16px;
+  line-height: 18px;
+  color: #000000;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+  border: 1px solid #bdc6ca;
+}
+
+.pagination a:active {
+  border: 1px solid #ee3643;
+}
+
+.pagination .active {
+  background-color: #ee3643;
+  color: #ffffff;
+  border: 1px solid #ee3643;
+}
+
+.pagination .next-page {
+  padding: 10px 32px 12px 32px;
+}
+
+/* статья о перформаторах */
+.about-wrapper {
+  width: 100%;
+  margin-top: 60px;
+  padding-top: 67px;
+  padding-bottom: 73px;
+  background-color: #f4f7f9;
+}
+
+.about-wrapper .container h2+p {
+  margin: 0;
+  font-family: "Cuprum","Arial",sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
 }
