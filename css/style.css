@@ -61,7 +61,7 @@ input[type="radio"].visually-hidden {
 
 .main-nav-wrapper {
   width: 100%;
-  margin-bottom: 47px;
+  margin-bottom: 43px;
   background-color: #293449;
 }
 
@@ -95,13 +95,12 @@ input[type="radio"].visually-hidden {
 
 /* стилизуем поле поиска */
 .search {
-  width: 270px;
   margin-left: 220px;
 }
 
 .search input {
   position: relative;
-  width: 100%;
+  width: 270px;
   height: 42px;
   padding-left: 49px;
   font-family: "Cuprum","Arial",sans-serif;
@@ -142,13 +141,13 @@ input[type="radio"].visually-hidden {
 .bookmark,
 .cart,
 .order {
-  width: 150px;
   padding-top: 12px;
 }
 
 /* Стилизуем кнопку закладок */
 .bookmark {
   position: relative;
+  padding-right: 28px;
   padding-left: 44px;
   font-family: "Cuprum","Arial",sans-serif;
   color: #ffffff;
@@ -191,6 +190,7 @@ input[type="radio"].visually-hidden {
 /* стилизуем кнопку корзины */
 .cart {
   position: relative;
+  padding-right: 30px;
   padding-left: 50px;
   font-family: "Cuprum", "Arial", sans-serif;
   color: #ffffff;
@@ -232,6 +232,7 @@ input[type="radio"].visually-hidden {
 
 /* стилизуем кнопку оформления заказа */
 .order {
+  padding-right: 22px;
   padding-left: 20px;
   line-height: 18px;
   color: #ffffff;
@@ -290,6 +291,7 @@ input[type="radio"].visually-hidden {
 
 .address p {
   margin-top: 5px;
+  margin-bottom: 0;
   font-size: 14px;
   text-align: center;
   color: #32425c;
@@ -297,6 +299,7 @@ input[type="radio"].visually-hidden {
 
 /* блок с кнопками войти/регистрация */
 .enter {
+  position: relative;
   padding-top: 12px;
   padding-right: 27px;
   padding-bottom: 12px;
@@ -307,21 +310,33 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
+.enter::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 17px;
+  top: 15px;
+  left: 18px;
+  background: url("../img/icon-login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .registration {
-  margin-left: 7px;
+  margin-left: 6px;
   padding-top: 12px;
-  padding-right: 25px;
+  padding-right: 23px;
   padding-bottom: 12px;
   padding-left: 25px;
   font-size: 21px;
   text-transform: none;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #e5e5e5;
 }
 
 .user {
   margin-top: 12px;
-  margin-left: 69px;
+  margin-left: 73px;
 }
 
 .user a:hover,
@@ -346,11 +361,18 @@ input[type="radio"].visually-hidden {
 }
 
 .main-nav a {
-  height: 60px;
+  display: block;
+  padding-top: 18px;
+  padding-bottom: 18px;
   color: #ffffff;
 }
 
-
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 55px;
+  padding-left: 52px;
+}
 
 /* блок с описанием компании и контактами */
 .delivery h2,
