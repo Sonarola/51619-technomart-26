@@ -638,6 +638,55 @@ input[type="radio"].visually-hidden {
 }
 
 /* блок с описанием компании и контактами */
+.services-wrap {
+  background-color: #f4f7f9;
+}
+
+.services-wrap .container {
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 99px;
+}
+
+.services-items-wrap {
+  display: flex;
+  margin-top: 74px;
+}
+
+.services-items {
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  list-style: none;
+}
+
+.services-items a {
+  display: block;
+  width: 240px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-left: 22px;
+  color: #ffffff;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
+  background-color: #32425c;
+}
+
+.services-items a:hover,
+.services-items a:focus {
+  border-bottom: 1px solid #293449;
+  background-color: #293449;
+}
+
+.services-items a:active {
+  color: #32425c;
+  border-top: 1px solid #ffffff;
+  background-color: #ffffff;
+}
+
+.services h2,
 .delivery h2,
 .contacts h2 {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -645,6 +694,31 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
   text-transform: uppercase;
   color: #000000;
+}
+
+.services-items-info {
+  margin-left: 80px;
+}
+
+.services-info {
+  margin: 0;
+  padding: 0;
+}
+
+.services-delivery p:first-child,
+.services-guarantee p:first-child,
+.services-credit p:first-child {
+  margin: 0;
+  padding: 0 0 34px 0;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.services-guarantee,
+.services-credit {
+  display: none;
 }
 
 .delivery ul {
