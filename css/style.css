@@ -958,6 +958,7 @@ input[type="radio"].visually-hidden {
 }
 
 .name {
+  display: block;
   position: relative;
   width: 300px;
   padding-top: 12px;
@@ -1025,6 +1026,20 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.user-options {
+  display: inline-block;
+  font-size: 16px;
+  color: #32425c;
+  text-decoration: underline;
+}
+
+.user-options {
+  margin-left: 18px;
+}
+
+.dot {
+
+}
 
 /* блок с хлбными крошками */
 .breadcrumbs {
