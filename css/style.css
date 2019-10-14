@@ -32,9 +32,7 @@ a {
   border: none;
 }
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
   width: 1px;
@@ -76,7 +74,6 @@ input[type="radio"].visually-hidden {
 
 /* стилизуем логотип */
 .logo {
-  display: inline-block;
   position: absolute;
   padding-top: 13px;
   padding-right: 56px;
@@ -423,9 +420,9 @@ input[type="radio"].visually-hidden {
 }
 
 .category-item a {
-  display: inline-block;
   min-width: 135px;
   height: 38px;
+  margin-left: 3px;
   line-height: 38px;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
@@ -441,7 +438,8 @@ input[type="radio"].visually-hidden {
 }
 
 .category-item p {
-  display: inline-block;
+  display: block;
+  margin-bottom: 15px;
   font-size: 24px;
   font-weight: bold;
 }
@@ -467,7 +465,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   width: 75px;
   height: 61px;
-  top: 31px;
+  top: 33px;
   left: 197px;
   background: url("../img/icon-2.svg");
   background-repeat: no-repeat;
@@ -743,10 +741,20 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   margin-bottom: 86px;
+  padding-top: 82px;
+}
+
+.technomart h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .delivery {
   width: 520px;
+}
+
+.delivery p:nth-child(3) {
+  margin-top: 24px;
 }
 
 .delivery ul {
@@ -775,6 +783,10 @@ input[type="radio"].visually-hidden {
 
 .contacts {
   width: 300px;
+}
+
+.contact-map img {
+  margin-bottom: 50px;
 }
 
 .feedback {
@@ -807,7 +819,7 @@ input[type="radio"].visually-hidden {
 
 .footer-logo {
   position: static;
-  padding-bottom: 3px;
+  padding: 20px 41px 0 41px;
 }
 
 .top-footer {
@@ -1035,10 +1047,6 @@ input[type="radio"].visually-hidden {
 
 .user-options {
   margin-left: 18px;
-}
-
-.dot {
-
 }
 
 /* блок с хлбными крошками */
