@@ -400,13 +400,25 @@ a {
 /* Блок с категориями */
 
 .category {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; */
   margin-top: 60px;
   font-family: "Cuprum", "Arial", sans-serif;
   margin-bottom: 43px;
+}
+
+.category-top,
+.category-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-bottom-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .category-item {
@@ -442,6 +454,18 @@ a {
   margin-bottom: 15px;
   font-size: 24px;
   font-weight: bold;
+}
+
+.category-top .category-item:first-child::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 59px;
+  top: 0;
+  left: 240px;
+  background: url("../img/new-flag.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .category-item:first-child::after {
@@ -488,11 +512,11 @@ a {
   background-position: 0 0;
 }
 
-.category-item:nth-child(4) {
+.category-bottom-right .category-item:first-child {
   background-color: #8ed78f;
 }
 
-.category-item:nth-child(4)::after {
+.category-bottom-right .category-item:first-child::after {
   content: "";
   position: absolute;
   width: 59px;
@@ -503,11 +527,12 @@ a {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-.category-item:nth-child(5) {
+
+.category-bottom-right .category-item:nth-child(2) {
   background-color: #ffc047;
 }
 
-.category-item:nth-child(5)::after {
+.category-bottom-right .category-item:nth-child(2)::after {
   content: "";
   position: absolute;
   width: 78px;
@@ -517,11 +542,6 @@ a {
   background: url("../img/icon-5.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-}
-
-.category-item:nth-child(4),
-.category-item:nth-child(5) {
-  order: 1;
 }
 
 .slider {
@@ -624,6 +644,18 @@ a {
   margin: 0 !important;
 }
 
+.popular-products .catalog-item:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 59px;
+  top: 0;
+  left: 158px;
+  background: url("../img/new-flag.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 /* Блок "популярные производители" */
 .popular-manufacturers ul {
   display: flex;
@@ -635,11 +667,12 @@ a {
 }
 
 .popular-manufacturers ul li a {
-  display: inline-block;
+  display: inline-flex;
   width: 220px;
   height: 145px;
   margin-bottom: 20px;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   border: solid 1px #eaeaea;
 }
 
