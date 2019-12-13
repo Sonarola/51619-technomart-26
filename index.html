@@ -376,32 +376,46 @@
     </footer>
 
     <!-- размечаем pop-up c картой -->
-    <section class="map-modal">
+    <section class="modal modal-map">
       <h2 class="visually-hidden">Как добраться</h2>
       <p>
         <img src="img/map-modal.png" width="940px" height="446px" alt="Офис компании находится по адресу Большая Конюшенная  ул., 19">
       </p>
-      <button type="button">Закрыть</button>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
+
     <!-- размечаем pop-up с формой обратной связи-->
-    <section class="feedback-modal">
+    <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <form action="post">
-        <p>
-          <label for="field-name">Ваше имя:</label>
-          <input type="text" name="yourname" placeholder="Имя Фамилия" id="field-name">
-        </p>
-        <p>
-          <label for="field-email">Ваш e-mail:</label>
-          <input type="text" name="email" placeholder="email@example.com" id="field-email">
-        </p>
-        <p>
-          <label for="field-letter">Текст письма</label>
-          <textarea name="letter" id="field-letter" cols="30" rows="5" placeholder="В свободной форме"></textarea>
-        </p>
-        <button type="submit">Отправить</button>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="feedback-form-top">
+          <div class="feedback-container">
+            <p class="feedback-item">
+              <label for="field-name">Ваше имя:</label>
+              <input type="text" name="yourname" placeholder="Имя Фамилия" id="field-name" required>
+            </p>
+            <p class="feedback-item">
+              <label for="field-email">Ваш e-mail:</label>
+              <input type="text" name="email"         placeholder="email@example.com" id="field-email" required>
+            </p>
+            <p>
+              <label for="field-letter">Текст письма</label>
+              <textarea name="letter" id="field-letter" cols="30"         rows="5" placeholder="В свободной форме"></textarea>
+            </p>
+          </div>
+        </div>
+        <div class="feedback-form-bottom">
+          <div class="feedback-container">
+            <button class="btn" type="submit">Отправить</button>
+          </div>
+        </div>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
+  <script src="js/main.js"></script>
   </body>
 </html>
