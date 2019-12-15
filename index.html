@@ -294,7 +294,7 @@
         <section class="contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, <br> заехав в наш   офис:</p>
-          <a class="contact-map" href="https://www.google.com/maps">
+          <a class="contact-map" href="">
           <img src="img/map.png" width="300px"  height="158px"   alt="Схема проезда к нашему   магазину">
           </a>
           <a class="btn feedback" href="">Заблудились? Напишите нам!</a>
@@ -378,9 +378,12 @@
     <!-- размечаем pop-up c картой -->
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как добраться</h2>
-      <p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3063546076781!2d30.32264872227694!3d59.93856844561818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1576388647509!5m2!1sru!2sru"
+        width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      <!-- <p>
         <img src="img/map-modal.png" width="940px" height="446px" alt="Офис компании находится по адресу Большая Конюшенная  ул., 19">
-      </p>
+      </p> -->
       <button class="modal-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
@@ -394,11 +397,11 @@
           <div class="feedback-container">
             <p class="feedback-item">
               <label for="field-name">Ваше имя:</label>
-              <input type="text" name="yourname" placeholder="Имя Фамилия" id="field-name" required>
+              <input type="text" name="yourname" placeholder="Имя Фамилия" id="field-name">
             </p>
             <p class="feedback-item">
               <label for="field-email">Ваш e-mail:</label>
-              <input type="text" name="email"         placeholder="email@example.com" id="field-email" required>
+              <input type="text" name="email"         placeholder="email@example.com" id="field-email">
             </p>
             <p>
               <label for="field-letter">Текст письма</label>
@@ -416,6 +419,7 @@
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
-  <script src="js/main.js"></script>
+  <script src="js/feedbackpopup.js"></script>
+  <script src="js/mappopup.js"></script>
   </body>
 </html>

@@ -1509,7 +1509,6 @@ legend+p {
 
 .modal {
   position: fixed;
-  border-top: 7px solid #ee3643;
   color: #000000;
   background-color: #ffffff;
 }
@@ -1543,6 +1542,16 @@ legend+p {
   left: 50%;
   width: 620px;
   margin-left: -310px;
+  border-top: 7px solid #ee3643;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+}
+
+.modal-map {
+  display: none;
+  bottom: 210px;
+  left: 50%;
+  width: 940px;
+  margin-left: -470px;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
@@ -1622,4 +1631,28 @@ legend+p {
 .feedback-container {
   width: 460px;
   margin: 0 auto;
+}
+
+@keyframes jump {
+  0% {transform: translateY(-2000px);}
+  70% {transform: translateY(30px);}
+  90% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
+}
+
+.modal-show {
+  display: block;
+  animation-name: jump;
+  animation-duration: 0.6s;
+}
+
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }

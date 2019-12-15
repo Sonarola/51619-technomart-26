@@ -1,4 +1,3 @@
-/* Вызов модалки "Обратная связь" */
 var feedbacklink = document.querySelector(".feedback");
 var popupfeedback = document.querySelector(".modal-feedback");
 var feedbackclose = popupfeedback.querySelector(".modal-close");
@@ -32,12 +31,13 @@ feedbacklink.addEventListener("click", function (evt) {
 feedbackclose.addEventListener("click", function (evt) {
   evt.preventDefault();
   popupfeedback.classList.remove("modal-show");
+  popupfeedback.classList.remove("modal-error");
 });
 
 feedbackform.addEventListener("submit", function(evt) {
   if (!login.value || !email.value) {
     evt.preventDefault();
-    console.log("Нужно ввести логин и пароль");
+    popupfeedback.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("login", login.value);
